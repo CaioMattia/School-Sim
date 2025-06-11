@@ -9,7 +9,8 @@ public class plrMovement : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false;
         animator = GetComponent<Animator>();  // Pega o Animator no mesmo GameObject
         Debug.Log("Animator inicializado.");
     }
