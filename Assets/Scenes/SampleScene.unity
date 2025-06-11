@@ -269,7 +269,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 13.858139
+  m_FocalLength: 12
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -284,7 +284,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.000004
+  field of view: 67.38675
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -310,8 +310,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11275847, y: -0.000000026019752, z: 0.0000000029527787, w: 0.9936225}
-  m_LocalPosition: {x: 0, y: 2.0887778, z: -3.3295808}
+  m_LocalRotation: {x: 0.26486287, y: 5.6675766e-25, z: -1.5567273e-25, w: 0.9642861}
+  m_LocalPosition: {x: 0, y: 2.378049, z: -1.7133714}
   m_LocalScale: {x: 1, y: 1.8445797, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -748,7 +748,7 @@ MonoBehaviour:
         DecelTime: 0.2
     - Name: Look Orbit Y
       Owner: {fileID: 2012990651}
-      Enabled: 0
+      Enabled: 1
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
@@ -813,7 +813,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 0.5, y: 0.5}
+  Damping: {x: 0, y: 0}
   Lookahead:
     Enabled: 0
     Time: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   TargetOffset: {x: 0, y: 0, z: 0}
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0, y: 0, z: 0}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -843,9 +843,9 @@ MonoBehaviour:
   Orbits:
     Top:
       Radius: 2
-      Height: 5
+      Height: 2
     Center:
-      Radius: 4
+      Radius: 1
       Height: 2.25
     Bottom:
       Radius: 2.5
@@ -906,7 +906,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 67.38675
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -933,8 +933,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012990647}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.112758465, y: -0.00000002601975, z: 0.0000000029527785, w: 0.9936225}
-  m_LocalPosition: {x: 0, y: 2.0887778, z: -3.3295808}
+  m_LocalRotation: {x: 0.26486284, y: 5.2031796e-25, z: 1.3400066e-26, w: 0.96428615}
+  m_LocalPosition: {x: 0, y: 2.378049, z: -1.7133714}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
