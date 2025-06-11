@@ -47,19 +47,19 @@ public class plrMovement : MonoBehaviour
         if ((inputDirection != Vector3.zero) && (!Input.GetKey((KeyCode.LeftShift))))
         {
             moveSpeed = 4f;
-            animator.CrossFade("walk", 0.01f);
+            animator.CrossFade("walk", 0.014f);
             Debug.Log("Estado: Andando");
         }
         else if ((inputDirection != Vector3.zero) && (Input.GetKey((KeyCode.LeftShift))))
         {
             moveSpeed = 6f;
-            animator.CrossFade("run", 0.01f);
+            animator.CrossFade("run", 0.014f);
             Debug.Log("Estado: Correndo");
         }
         else
         {
             moveSpeed = 4f;
-            animator.CrossFade("idle", 0.01f);
+            animator.CrossFade("idle", 0.014f);
             Debug.Log("Estado: Parado");
         }
     }
