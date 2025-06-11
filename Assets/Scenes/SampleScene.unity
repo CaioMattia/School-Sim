@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &235111672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235111673}
+  m_Layer: 0
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235111673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235111672}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1645339162}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &237063629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,7 +208,10 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 9b15b0ccea0162545b121f31222f9d28, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400064, guid: 75e56387ded5c0a489e6773aee1173fe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 235111673}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100062, guid: 75e56387ded5c0a489e6773aee1173fe, type: 3}
       insertIndex: -1
@@ -228,19 +262,19 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 2
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 50
+  m_FocalLength: 13.858139
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
   m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
+  m_SensorSize: {x: 21.946, y: 16.002}
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -276,8 +310,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0024069764, y: 0.984598, z: -0.013597885, w: -0.17428754}
-  m_LocalPosition: {x: 0.15088344, y: 1.3920758, z: 0.8716192}
+  m_LocalRotation: {x: 0.11275847, y: -0.000000026019752, z: 0.0000000029527787, w: 0.9936225}
+  m_LocalPosition: {x: 0, y: 2.0887778, z: -3.3295808}
   m_LocalScale: {x: 1, y: 1.8445797, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -594,6 +628,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100062, guid: 75e56387ded5c0a489e6773aee1173fe, type: 3}
   m_PrefabInstance: {fileID: 237063629}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1645339162 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400064, guid: 75e56387ded5c0a489e6773aee1173fe, type: 3}
+  m_PrefabInstance: {fileID: 237063629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1645339163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -709,7 +748,7 @@ MonoBehaviour:
         DecelTime: 0.2
     - Name: Look Orbit Y
       Owner: {fileID: 2012990651}
-      Enabled: 1
+      Enabled: 0
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
@@ -824,7 +863,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 17.5
+    Value: 2
     Center: 17.5
     Range: {x: -10, y: 45}
     Wrap: 0
@@ -863,7 +902,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 235111673}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -894,8 +933,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012990647}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0024069764, y: 0.984598, z: -0.013597885, w: -0.17428754}
-  m_LocalPosition: {x: 0.15088344, y: 1.3920758, z: 0.8716192}
+  m_LocalRotation: {x: 0.112758465, y: -0.00000002601975, z: 0.0000000029527785, w: 0.9936225}
+  m_LocalPosition: {x: 0, y: 2.0887778, z: -3.3295808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
