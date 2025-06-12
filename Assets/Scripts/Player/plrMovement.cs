@@ -3,7 +3,7 @@ using UnityEngine;
 public class plrMovement : MonoBehaviour
 {
     public float rotationSpeed = 10f; // Velocidade com que o personagem gira para a direção do movimento
-    public float moveSpeed = 4f; // Velocidade inicial de movimento
+    public float moveSpeed = 3f; // Velocidade inicial de movimento
 
     private Animator animator; // Referência para o componente Animator
 
@@ -48,20 +48,20 @@ public class plrMovement : MonoBehaviour
 
         if ((inputDirection != Vector3.zero) && (!Input.GetKey((KeyCode.LeftShift))))
         {
-            moveSpeed = 4f;
-            animator.CrossFade("walk", 0.01f);
+            moveSpeed = 3f;
+            animator.Play("walk");
             Debug.Log("Estado: Andando");
         }
         else if ((inputDirection != Vector3.zero) && (Input.GetKey((KeyCode.LeftShift))))
         {
-            moveSpeed = 6f;
-            animator.CrossFade("run", 0.01f);
+            moveSpeed = 5f;
+            animator.Play("run");
             Debug.Log("Estado: Correndo");
         }
         else
         {
-            moveSpeed = 4f;
-            animator.CrossFade("idle", 0.01f);
+            moveSpeed = 3f;
+            animator.Play("idle");
             Debug.Log("Estado: Parado");
         }
     }
