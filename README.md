@@ -1,3 +1,3 @@
 # School Sim
 
-Simulador de escola, em fase incial de desenvolvimento.
+Simulador de escola, em fase inicial de desenvolvimento.
