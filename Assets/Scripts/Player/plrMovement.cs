@@ -95,7 +95,7 @@ public class plrMovement : MonoBehaviour
         if (currentState == newState) return;
 
         // Faz a transição suave para a nova animação
-        animator.CrossFade(newState, 0.015f);
+        animator.CrossFade(newState, 0.02f);
 
         // Atualiza o estado atual
         currentState = newState;
