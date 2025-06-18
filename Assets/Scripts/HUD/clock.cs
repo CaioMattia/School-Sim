@@ -29,7 +29,7 @@ public class clock : MonoBehaviour
             {
                 hour = 0;
             }
-
+            
             hourText.text = hour.ToString("00");   // Para mostrar sempre 2 dígitos (ex: 01, 09)
             minuteText.text = minute.ToString("00");
             Debug.Log(hour + ":" + minute);
