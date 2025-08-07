@@ -70,7 +70,6 @@ public class plrMovement : MonoBehaviour
             moveSpeed = 5f;
             ChangeAnimationState("run");
         }
-        // Se não há movimento
         else
         {
             moveSpeed = 3f;
@@ -78,13 +77,11 @@ public class plrMovement : MonoBehaviour
         }
     }
 
-    // Método responsável por mudar o estado da animação sem repetir o mesmo
     void ChangeAnimationState(string newState)
     {
         // Se o novo estado é o mesmo que o atual, não faz nada (evita reiniciar animações desnecessariamente)
         if (currentState == newState) return;
 
-        // Faz a transição suave para a nova animação
         animator.CrossFade(newState, 0.03f);
 
         // Atualiza o estado atual
