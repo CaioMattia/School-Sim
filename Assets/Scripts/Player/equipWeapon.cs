@@ -7,22 +7,17 @@ public class equipWeapon : MonoBehaviour
     // Objeto da arma que será equipada
     public GameObject weaponObj;
 
-    // Transform da arma no mundo (posição atual da arma)
     public Transform weaponTransform;
 
-    // Transform do jogador para calcular distância até a arma
     public Transform player;
 
-    // Transform da mão do jogador, onde a arma será "presa" ao ser equipada
     public Transform playerHand;
 
-    // Método chamado a cada frame
     void Update()
     {
         // Verifica se a distância entre a arma e o jogador é menor que 1.5 unidades
         if (Vector3.Distance(weaponTransform.position, player.position) < 1.5f)
         {
-            // Se a tecla 'F' estiver pressionada
             if (Input.GetKey(KeyCode.F))
             {
                 // Define o pai da arma como sendo a mão do jogador (para que a arma siga o movimento da mão)
