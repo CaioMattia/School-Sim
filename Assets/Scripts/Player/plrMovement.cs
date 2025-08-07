@@ -1,32 +1,24 @@
 using UnityEngine;
 
-// Classe responsável pelo controle de movimento e animação do jogador
 public class plrMovement : MonoBehaviour
 {
-    // Velocidade de rotação do personagem (usada para suavizar a rotação)
     public float rotationSpeed = 10f;
 
-    // Velocidade padrão de movimento (pode ser alterada dinamicamente)
     public float moveSpeed = 3f;
 
-    // Referência ao componente Animator para controlar as animações
     private Animator animator;
 
     // Armazena o estado atual da animação para evitar transições desnecessárias
     private string currentState = "";
 
-    // Função chamada ao iniciar o jogo (antes do primeiro frame)
     void Start()
     {
-        // Trava o cursor no centro da tela para evitar que ele saia durante o controle do jogador
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false; // Oculta o cursor
+        Cursor.visible = false;
 
-        // Obtém o componente Animator que está no mesmo GameObject
         animator = GetComponent<Animator>();
     }
 
-    // Função chamada a cada frame
     void Update()
     {
         // Captura o input do teclado para movimentação (setas/WASD)
@@ -57,11 +49,9 @@ public class plrMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            // Move o personagem na direção desejada com a velocidade atual
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
         }
 
-        // Controla qual animação deve ser executada com base no movimento e na tecla Shift
         HandleAnimation(inputDirection);
     }
 
@@ -77,14 +67,14 @@ public class plrMovement : MonoBehaviour
         // Se o jogador está se movendo E segurando Shift
         else if (inputDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
         {
-            moveSpeed = 5f; // Aumenta a velocidade para corrida
-            ChangeAnimationState("run"); // Troca para animação de corrida
+            moveSpeed = 5f;
+            ChangeAnimationState("run");
         }
         // Se não há movimento
         else
         {
-            moveSpeed = 3f; // Mantém a velocidade padrão (pode ser usada em futuras ações paradas)
-            ChangeAnimationState("idle"); // Troca para animação de idle (parado)
+            moveSpeed = 3f;
+            ChangeAnimationState("idle");
         }
     }
 
